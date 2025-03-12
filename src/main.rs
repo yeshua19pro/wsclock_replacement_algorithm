@@ -3,7 +3,6 @@ use std::collections::VecDeque;
 struct Page {
     number: i32,
     reference: bool,
-    modify: bool,
     last_used: usize,
 }
 
@@ -54,7 +53,6 @@ fn wsclock_page_replacement(
         frames.push_back(Page {
             number: page,
             reference: true,
-            modify: false,
             last_used: time,
         });
     }
